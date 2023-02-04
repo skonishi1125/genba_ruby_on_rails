@@ -302,3 +302,208 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2023-02-04 22:02:00 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  Rendered tasks/index.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:02:01 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 9.1ms)
+
+
+  
+SyntaxError (/Users/skoni/Desktop/study/genba_ruby_on_rails/3_chapter/taskleaf/app/views/tasks/new.html.slim:4: syntax error, unexpected '='
+...mple::Utils.escape_html_safe((= link_to  "一覧", tasks_pat...
+...                              ^):
+  
+app/views/tasks/new.html.slim:4: syntax error, unexpected '='
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:02:08 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:04:55 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (340.7ms)
+Completed 200 OK in 368ms (Views: 365.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:06:42 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-04 22:16:22 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TP95j8A5tEphXafRGqrJZNTzOSD8QYaZYaAjWTAd4c5XwwnIdrxCgGUecTXG0EncKwdKOFgl5bluDuf5BlEeZQ==", "task"=>{"name"=>"一覧表示機能の実装", "description"=>"一覧アクションと一覧画面を実装する。\r\nそして詳細、編集、削除のリンクを加える。"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mTask Create (2.9ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "一覧表示機能の実装"], ["description", "一覧アクションと一覧画面を実装する。\r\nそして詳細、編集、削除のリンクを加える。"], ["created_at", "2023-02-04 13:16:22.198595"], ["updated_at", "2023-02-04 13:16:22.198595"]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:14
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 19ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:16:22 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  Rendered tasks/index.html.slim within layouts/application (2.6ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:16:27 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:21:59 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:35:27 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  Rendered tasks/index.html.slim within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:35:40 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  Rendered tasks/index.html.slim within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:35:47 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:5
+  Rendered tasks/index.html.slim within layouts/application (25.4ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    2: p Find me in app/views/tasks/index.html.slim
+    3: h1 タスク一覧
+    4: = link_to  "新規登録", new_task_path, class: 'btn btn-primary'
+    5: = @tasks[:id]
+  
+app/views/tasks/index.html.slim:5:in `_app_views_tasks_index_html_slim___1975609996307640237_70116632258860'
+Started GET "/tasks" for ::1 at 2023-02-04 22:36:06 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  Rendered tasks/index.html.slim within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:36:16 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  Rendered tasks/index.html.slim within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:37:49 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:12
+  Rendered tasks/index.html.slim within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:38:03 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:12
+  Rendered tasks/index.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:38:20 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-04 22:38:34 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6HorSptlfQtFhC3fiHZmtpegTB4y/vZtT1JAI8DW/znh0mJxnDJ7x5ifWGstPoWVygiTMGLhoQSSEise5eWeBw==", "task"=>{"name"=>"詳細表示画面の実装", "description"=>"タスクをクリックした時の挙動を作る。"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "詳細表示画面の実装"], ["description", "タスクをクリックした時の挙動を作る。"], ["created_at", "2023-02-04 13:38:34.625417"], ["updated_at", "2023-02-04 13:38:34.625417"]]
+  ↳ app/controllers/tasks_controller.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:15
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:38:34 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:12
+  Rendered tasks/index.html.slim within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-04 22:38:36 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/new.html.slim within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-04 22:38:53 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jK+QIbDj706N5l0eIbIR0Qd2KIfOSXcFxVQ0v9lA/MKFB9kat7TpglD9KKqE+vLyWt73qZ5WIGwYFF+C/HOd/A==", "task"=>{"name"=>"編集機能の実装", "description"=>"タスクに誤字があった時などに編集できる機能を作る。"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15
+  [1m[36mTask Create (1.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "編集機能の実装"], ["description", "タスクに誤字があった時などに編集できる機能を作る。"], ["created_at", "2023-02-04 13:38:53.245833"], ["updated_at", "2023-02-04 13:38:53.245833"]]
+  ↳ app/controllers/tasks_controller.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:15
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:38:53 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:12
+  Rendered tasks/index.html.slim within layouts/application (5.1ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-04 22:42:32 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:13
+  Rendered tasks/index.html.slim within layouts/application (4.3ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
