@@ -507,3 +507,280 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/tasks" for ::1 at 2023-02-06 22:44:56 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:13
+  Rendered tasks/index.html.slim within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"tasks", :id=>nil}):
+    13:     - @tasks.each do |task|
+    14:       tr 
+    15:         td= task.id 
+    16:         td= link_to task.name, controller: "tasks", action: "show", id: @task
+    17:         td= task.created_at 
+  
+app/views/tasks/index.html.slim:16:in `block in _app_views_tasks_index_html_slim___1975609996307640237_70117301727340'
+app/views/tasks/index.html.slim:13:in `_app_views_tasks_index_html_slim___1975609996307640237_70117301727340'
+Started GET "/tasks" for ::1 at 2023-02-06 22:45:05 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:13
+  Rendered tasks/index.html.slim within layouts/application (6.4ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 22:45:08 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-06 22:46:07 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:13
+  Rendered tasks/index.html.slim within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 22:46:08 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 22:46:40 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (1.7ms)
+Completed 200 OK in 79ms (Views: 21.9ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 22:50:11 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (4.5ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 22:58:46 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 23:08:35 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (4.3ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-06 23:08:38 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:14
+  Rendered tasks/index.html.slim within layouts/application (5.4ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:08:40 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:12:05 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 23:12:07 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (273.4ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007f8aa9aa6b90>:0x00007f8a99e1da40>
+Did you mean?  @task):
+    20:       th= Task.human_attribute_name(:updated_at)
+    21:       td= @task.updated_at
+    22: 
+    23: = link_to '編集', edit_task_path(task), class: 'btn btn-primary mr-3'
+  
+app/views/tasks/show.html.slim:23:in `_app_views_tasks_show_html_slim__2396457569877943733_70116631966420'
+Started GET "/tasks/1" for ::1 at 2023-02-06 23:12:14 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (7.8ms)
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:12:16 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:14:53 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 21.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:17:46 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (237.1ms)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f8a99edfcd0>:0x00007f8ad99c1fd8>):
+    10:   .form-froup 
+    11:     = f.label :description
+    12:     = f.text_area :description, rows: 5, class: 'form-control', id: 'task_description'
+    13: = f.submit nil, class: 'btn btn-primary'
+  
+app/views/tasks/edit.html.slim:13:in `_app_views_tasks_edit_html_slim__1106882500026710317_70117166552180'
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:18:05 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:18:16 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:19:07 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (4.3ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:19:08 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:19:35 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2023-02-06 23:19:42 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/edit.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2023-02-06 23:19:59 +0900
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujHTXbxqTM+J2eOFPzgJBJc42fg8v6+Cf5lsrSWU/qGhDaMaCu+6BY2aNWHjQom8aMyq4JjbzKJwN6gNE9gBCg==", "task"=>{"name"=>"一覧表示機能の実装（更新）", "description"=>"一覧アクションと一覧画面を実装する。\r\nそして詳細、編集、削除のリンクを加える。"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:26
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "name" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["name", "一覧表示機能の実装（更新）"], ["updated_at", "2023-02-06 14:19:59.100190"], ["id", 1]]
+  ↳ app/controllers/tasks_controller.rb:26
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:26
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-06 23:19:59 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:14
+  Rendered tasks/index.html.slim within layouts/application (6.1ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for ::1 at 2023-02-06 23:20:01 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (4.3ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
