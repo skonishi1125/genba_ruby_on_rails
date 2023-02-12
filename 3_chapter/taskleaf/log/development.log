@@ -1418,3 +1418,12 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/tasks" for ::1 at 2023-02-12 20:46:30 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:14
+  Rendered tasks/index.html.slim within layouts/application (22.1ms)
+Completed 200 OK in 74ms (Views: 62.1ms | ActiveRecord: 1.0ms)
+
+
