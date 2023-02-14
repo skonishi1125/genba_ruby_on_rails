@@ -1427,3 +1427,242 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 74ms (Views: 62.1ms | ActiveRecord: 1.0ms)
 
 
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/tasks/1/edit" for ::1 at 2023-02-13 21:13:00 +0900
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:21
+  Rendering tasks/edit.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (18.4ms)
+  Rendered tasks/edit.html.slim within layouts/application (27.9ms)
+Completed 200 OK in 333ms (Views: 316.2ms | ActiveRecord: 4.1ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3400679014569659550)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeTasksNameNotNull (20230213121807)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mALTER TABLE "tasks" ALTER COLUMN "name" SET NOT NULL[0m
+  ↳ db/migrate/20230213121807_change_tasks_name_not_null.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230213121807"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3400679014569659550)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (3.0ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-02-13 12:19:41.337735"], ["updated_at", "2023-02-13 12:19:41.337735"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "consoleで。"], ["created_at", "2023-02-13 12:20:48.857529"], ["updated_at", "2023-02-13 12:20:48.857529"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/tasks" for ::1 at 2023-02-13 21:20:52 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:14
+  Rendered tasks/index.html.slim within layouts/application (14.7ms)
+Completed 200 OK in 44ms (Views: 35.3ms | ActiveRecord: 5.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (2.0ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-02-13 12:36:54.550678"], ["updated_at", "2023-02-13 12:36:54.550678"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3400679014569659550)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeTasksNameNotNull (20230213121807)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "tasks" ALTER COLUMN "name" DROP NOT NULL[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230213121807"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3400679014569659550)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "テストタスク"], ["created_at", "2023-02-13 12:42:25.365853"], ["updated_at", "2023-02-13 12:42:25.365853"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/tasks/new" for ::1 at 2023-02-13 21:44:27 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (3.8ms)
+  Rendered tasks/new.html.slim within layouts/application (8.2ms)
+Completed 200 OK in 48ms (Views: 33.8ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-13 21:44:29 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guNRFVHWB2qyBrB3uVZzQjwlxN0Q4355XhaRJkrF4jOLSxguVoEBpm8dxcMcHpBhYY0b80D8KRCDVvobb/aDDQ==", "task"=>{"name"=>"", "description"=>""}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (バリデーションに失敗しました: 名称を入力してください):
+  
+app/controllers/tasks_controller.rb:16:in `create'
+Started GET "/tasks/new" for ::1 at 2023-02-14 21:27:55 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (5.0ms)
+  Rendered tasks/new.html.slim within layouts/application (10.1ms)
+Completed 200 OK in 59ms (Views: 42.5ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:27:57 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qdrgYPXw1NhnJFktXAI7NLlLykkzfKHbBR7O0hr3PY+y5pAnQ3UiEmNnj8mAeLuMRr+5UZcYwvsKsApyLLvCJA==", "task"=>{"name"=>"", "description"=>""}, "commit"=>"登録する"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (5.5ms)
+  Rendered tasks/new.html.slim within layouts/application (10.4ms)
+Completed 200 OK in 47ms (Views: 41.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:27:58 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgwlaJAIG7RQ1jADkgtiF2QD2TLGeM/axn73UOWHcaZ9MFUvJo3tflSV5udOceKvm/eqKmIcrPrJ0DPw08uODQ==", "task"=>{"name"=>"", "description"=>""}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (3.8ms)
+  Rendered tasks/new.html.slim within layouts/application (8.1ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2023-02-14 21:30:35 +0900
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.slim within layouts/application
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.slim:14
+  Rendered tasks/index.html.slim within layouts/application (6.9ms)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2023-02-14 21:30:37 +0900
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (3.8ms)
+  Rendered tasks/new.html.slim within layouts/application (7.8ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:30:38 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6KX0EApPqDGX6SlfZMzZZHu31w9FTwHjUvn+lOahfJ/hDb0rDRiu/UryXOvBhDpHJh8IIRVQVoqPuZWpw5IdoQ==", "task"=>{"name"=>"", "description"=>""}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (4.6ms)
+  Rendered tasks/new.html.slim within layouts/application (9.0ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:31:12 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79sgKr7oF91s+/KeCOi7meRNlWCpqmZ6DwjKwZQiobD051BtCG3hF2i4JHrUkjshG7nmeA3OBVoApg5hom5eGw==", "task"=>{"name"=>"", "description"=>"awawawa"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (4.6ms)
+  Rendered tasks/new.html.slim within layouts/application (9.2ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:31:13 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vHkuS28L5hEEFyzkH04kGGWocU4XaE1AAGBDIBOOUnenRV4M2Y4Q2wBU+gDDNKSgmlwCVrMMLmAPzoeAJcKt3A==", "task"=>{"name"=>"", "description"=>"awawawa"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (3.8ms)
+  Rendered tasks/new.html.slim within layouts/application (7.7ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:36:24 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D+D2N/rPig1G0yuZcUKyK2bgU26z6KOA1rjJXs2cpbIU3IZwTEp8x0KQ/X2tODKTmRQgdheMwKDZFg3++9BaGQ==", "task"=>{"name"=>"あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ", "description"=>"awawawa"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (4.9ms)
+  Rendered tasks/new.html.slim within layouts/application (9.6ms)
+Completed 200 OK in 50ms (Views: 34.3ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:43:53 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YDbHp1I/j9rBMfI1E3ItlrIGXr4J//WzH7+waumprM17Crfg5Lp5EMVyJNHPCK0uTfItpq2blpMQEXTK3+VTZg==", "task"=>{"name"=>"あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ", "description"=>"awawawa"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (4.6ms)
+  Rendered tasks/new.html.slim within layouts/application (9.5ms)
+Completed 200 OK in 61ms (Views: 45.3ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/tasks" for ::1 at 2023-02-14 21:43:55 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ydw+lMOT9weLoUJ/ilZ1TKbiRluSF+cI/p6Nlv9duvPS4E7TdRYBzY/ilJtWLPX0WRY1QzZzhCjxMEk2yRFFWA==", "task"=>{"name"=>"あああああああああああああ,ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ", "description"=>"awawawa"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/new.html.slim within layouts/application
+  Rendered tasks/_form.html.slim (4.3ms)
+  Rendered tasks/new.html.slim within layouts/application (8.4ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
