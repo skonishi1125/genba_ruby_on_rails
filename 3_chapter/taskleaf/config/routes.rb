@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
+  get '/login', to: 'sessions#new' # 元々の記載は get 'sessions/new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
   namespace :admin do
-    # get 'users/new'
-    # get 'users/edit'
-    # get 'users/show'
-    # get 'users/index'
-    resources :users
+    resources :users # get new | edit | show | index全て
   end
   resources :tasks
   root to: 'tasks#index'
