@@ -7,4 +7,7 @@ class User < ApplicationRecord
     # presence: 必須項目であることを示す uniqueness: 
     validates :name, presence: true
     validates :email, presence: true, uniqueness: true
+
+    has_many :tasks
+
 end
