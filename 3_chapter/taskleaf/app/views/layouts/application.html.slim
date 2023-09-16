@@ -17,6 +17,9 @@ html
           - if current_user.admin?
             li.nav-item= link_to 'ユーザー一覧', admin_users_path, class: 'nav-link'
           li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
+          li.nav-item= link_to "現在のログインユーザー: #{current_user.name}", admin_user_path(current_user),  class: 'nav-link'
+          li.nav-item
+            a.nav-link= '【管理者】' if current_user.admin?
         - else 
           li.nav-item= link_to 'ログイン', login_path, class: 'nav-link'
     .container
