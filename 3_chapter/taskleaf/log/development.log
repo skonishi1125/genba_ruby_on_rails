@@ -7365,3 +7365,12 @@ Processing by Admin::UsersController#show as HTML
 Completed 200 OK in 143ms (Views: 138.8ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/rails/info/routes" for ::1 at 2023-09-18 22:00:32 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.8.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (6.2ms)
+  Rendered /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.8.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 34ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
