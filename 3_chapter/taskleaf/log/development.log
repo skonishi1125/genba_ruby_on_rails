@@ -7824,3 +7824,15 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/tasks/22" for ::1 at 2023-09-29 20:13:49 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (7.2ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+

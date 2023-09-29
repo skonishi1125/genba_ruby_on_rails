@@ -4,7 +4,7 @@ describe 'タスク管理機能', type: :system do
   describe '一覧表示機能' do
     let(:user_a) { FactoryBot.create(:user, name:'ユーザーA', email: 'a@example.com') }
     let(:user_b) { FactoryBot.create(:user, name:'ユーザーB', email: 'b@example.com') }
-    let!(:task_a) { FactoryBot.create(:task, name:'最初のタスク', user: user_a)}
+    let!(:task_a) { FactoryBot.create(:task, name:'最初のタスク', description: 'test_task', user: user_a)}
 
     before do
       FactoryBot.create(:task, name: '最初のタスク', user: user_a)
@@ -43,7 +43,7 @@ describe 'タスク管理機能', type: :system do
         end
 
         it 'ユーザーAが作成したタスクは表示される' do
-          expect(page).to have_content '最初のタスク'
+          expect(page).to have_content 'test_task'
         end
       end
     end
