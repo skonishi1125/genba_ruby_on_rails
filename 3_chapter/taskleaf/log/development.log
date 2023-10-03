@@ -7836,3 +7836,24 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/tasks/22" for ::1 at 2023-10-01 22:02:36 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  Rendering tasks/show.html.slim within layouts/application
+  Rendered tasks/show.html.slim within layouts/application (12.0ms)
+Completed 200 OK in 75ms (Views: 51.6ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-10-01 22:02:36 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.8.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (10.9ms)
+  Rendered /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.2.8.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/skoni/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 39ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
