@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users # get new | edit | show | index全て
   end
-  resources :tasks
+  resources :tasks do
+    collection do 
+      get 'test'
+      get 'export'
+    end
+  end
   root to: 'tasks#index'
 end

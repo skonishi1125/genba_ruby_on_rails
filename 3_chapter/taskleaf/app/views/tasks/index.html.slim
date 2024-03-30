@@ -20,3 +20,12 @@ table.table.table-hover
         td
           = link_to '編集', edit_task_path(task), class: 'btn btn-primary mr-3'
           = link_to '削除', task, method: :delete, data: {confirm: "タスク「#{task.name}」を削除します。よろしいですか？"}, class: 'btn btn-danger'
+.container 
+  p #{tasks_path}
+  p #{new_task_path}
+  p #{test_tasks_path}
+  p #{export_tasks_path}
+  p= @time
+  p= @self
+  p= @prev_time
+  p= @prev_self

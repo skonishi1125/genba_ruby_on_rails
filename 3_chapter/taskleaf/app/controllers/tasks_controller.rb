@@ -6,6 +6,11 @@ class TasksController < ApplicationController
     logger.debug "【LOG】current_user: #{current_user[:id]}, name: #{current_user.name?}"
     logger.debug "【LOG】#{current_user.tasks.to_sql}}"
     @tasks = current_user.tasks.recent
+    @time = Time.zone.today
+    @self = Time.new(2023, 3, 10, 0, 0, 0, 0)
+    @prev_time = Time.zone.today.prev_month
+    @prev_self = @self.prev_month
+
   end
 
   def show
@@ -18,6 +23,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params.merge(user_id: current_user.id))
     if @task.save
+      logger.debug "task: #{@task.attributes.inspect}"
       redirect_to @task, notice: "タスク「#{@task.name}」を登録しました。"
     else
       render :new
