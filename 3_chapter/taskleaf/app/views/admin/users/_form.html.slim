@@ -10,6 +10,9 @@
   .form-group 
     = f.label :email, 'メールアドレス'
     = f.text_field :email, class: 'form-control'
+  .form-group
+    = f.label :icon
+    = f.file_field :icon, class: 'form-control'
   .form-check
     = f.label :admin, class: 'form-check-label' do
       = f.check_box :admin, class: 'form-check-input'
