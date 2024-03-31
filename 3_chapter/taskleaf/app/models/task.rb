@@ -1,4 +1,5 @@
 class Task < ApplicationRecord
+    has_one_attached :image
     before_validation :set_nameless_name # validationの前にこの処理を呼ぶ
     validates :name, presence: true
     validates :name, length: { maximum: 30 }
