@@ -10,4 +10,7 @@ class User < ApplicationRecord
 
     has_many :tasks
 
+    # アップローダの取り付け
+    mount_uploader :icon, IconUploader
+
 end

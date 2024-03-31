@@ -14,6 +14,9 @@ table.table.table-hover
       th= User.human_attribute_name(:email)
       td= @user.email
     tr
+      th= User.human_attribute_name(:icon)
+      td= image_tag @user.icon.url if @user.icon.url.present?
+    tr
       th= User.human_attribute_name(:admin)
       td= @user.admin? ? 'あり': 'なし'
     tr
