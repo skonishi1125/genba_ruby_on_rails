@@ -14,4 +14,16 @@
   .form-group 
     = f.label :image
     = f.file_field :image, class: 'form-control'
+  .form-group 
+    = f.label :qrcode_flag, class: 'form-check-label' do
+      = f.check_box :qrcode_flag, class: 'form-check-input', checked: true
+      | QRコードを生成する
   = f.submit nil, class: 'btn btn-primary'
+
+div
+  p application_helperで生成したQR ↓
+  p= qrcode('/test', 1)
+
+div 
+  p 画像として保存したQRコード↓
+  img src="/uploads/task/#{@task.qrcode}"
